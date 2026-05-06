@@ -343,3 +343,36 @@ html {
     padding: 10px 0;
     display: block;
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    /* ১. হিরো সেকশনের ভিডিওর উচ্চতা ঠিক করা */
+    .hero-section {
+        height: 60vh; /* মোবাইলে ভিডিওর উচ্চতা একটু কমিয়ে স্ক্রিনে ফিট করা */
+        overflow: hidden;
+    }
+
+    .hero-section video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ২. নেভিগেশন মেনু ঠিক করা */
+    nav {
+        overflow-x: auto; /* মেনু অনেক বড় হলে মোবাইলে যাতে স্ক্রল করা যায় */
+        white-space: nowrap;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    /* ৩. টাইটেল টেক্সট সাইজ ঠিক করা */
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+}
