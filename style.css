@@ -376,3 +376,62 @@ html {
         font-size: 1.5rem !important;
     }
 }
+
+/* Mobile Optimization for Studio Retouch Pro */
+@media (max-width: 768px) {
+    /* হিরো সেকশন বা ব্যানার এরিয়া ফিক্স */
+    .banner-area {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 300px; /* মোবাইলে ভিডিওর জন্য নির্দিষ্ট উচ্চতা */
+        background-color: #000; /* ভিডিও লোড হওয়ার আগে কালো ব্যাকগ্রাউন্ড */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* ভিডিওর সাইজ এবং পজিশন */
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ভিডিও যাতে স্ট্রেচ না হয় */
+        z-index: 1;
+    }
+
+    /* লোগো এবং টেক্সট ওভারলে */
+    .logo-overlay {
+        position: relative;
+        z-index: 2; /* ভিডিওর ওপরে রাখার জন্য */
+        text-align: center;
+        width: 90%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.4); /* টেক্সট যাতে পড়া যায় তাই হালকা শ্যাডো */
+        border: 1px solid rgba(255, 204, 0, 0.5); /* গোল্ডেন বর্ডার */
+        border-radius: 8px;
+    }
+
+    .brand-name {
+        font-size: 1.1rem !important; /* মোবাইলে ফন্ট একটু ছোট করা */
+        display: block;
+    }
+
+    .mini-logo {
+        width: 40px !important; /* লোগোর সাইজ অ্যাডজাস্ট করা */
+        margin-bottom: 5px;
+    }
+
+    /* নেভিগেশন মেনু মোবাইলে যাতে কেটে না যায় */
+    nav ul {
+        display: flex;
+        overflow-x: auto; /* স্লাইড করে সব অপশন দেখার জন্য */
+        white-space: nowrap;
+        gap: 15px;
+        padding: 10px 15px;
+        background: #111;
+    }
+}
