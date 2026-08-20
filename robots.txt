@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://studioretouchpro.netlify.app/sitemap.xml
+Sitemap: https://studioretouchpro-source.github.io/studioretouchpro/sitemap.xml
